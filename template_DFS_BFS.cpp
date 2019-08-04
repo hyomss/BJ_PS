@@ -20,6 +20,29 @@ void dfs(int n) {
 	}
 }
 
+void bfs(int start) {
+	int visit[MAX_N] = { 0 }; // √ ±‚»≠
+
+	queue <int> q;
+	q.push(start);
+	visit[start] = 1;
+
+	while (!q.empty()) {
+		int node = q.front();
+		cout << node << " ";
+
+		q.pop();
+		int nxt;
+		for (int i = 0; i < adj[node].size(); i++) {
+			nxt = adj[node][i];
+			if (visit[nxt] == 0) {
+				q.push(nxt);
+				visit[nxt] = 1;
+			}
+		}
+	}
+}
+
 int main() {
 	freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
 	memset(visit, 0, sizeof(visit));
