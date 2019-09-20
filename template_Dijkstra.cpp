@@ -60,10 +60,9 @@ int dijkstra(int s, int e) {
 		if (here_w > dist[here_idx]) continue; // 튜닝 옵션
 
 
-											   // 종료조건. 만약 모든 점에 대해 해야되면 큐 소진시까지 해야하므로 이부분 삭제
-											   // if (here_idx == e) return dist[e];
-
-											   // 현재 노드에서 이웃한 노드들의 최소거리 갱신
+												// 종료조건. 만약 모든 점에 대해 해야되면 큐 소진시까지 해야하므로 이부분 삭제					// if (here_idx == e) return dist[e];
+	
+	  	 // 현재 노드에서 이웃한 노드들의 최소거리 갱신
 		for (int i = 0; i < (int)adj[here_idx].size(); ++i) {
 			next_idx = adj[here_idx][i].idx;
 			next_w = adj[here_idx][i].w;
