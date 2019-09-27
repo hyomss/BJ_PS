@@ -65,10 +65,9 @@ int main() {
 		adj[b].push_back(a);
 	}
 
-	//// 이건 안해도 돌아가기도 하던데..
-	//for (int i = 1; i <= V; ++i) {
-	//	sort(adj[i].begin(), adj[i].end());
-	//}
+	for (int i = 1; i <= V; ++i) {
+		sort(adj[i].begin(), adj[i].end());
+	}
 
 
 	for(int i=1; i<=V;i++)
